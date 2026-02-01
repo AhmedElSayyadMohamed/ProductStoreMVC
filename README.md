@@ -60,4 +60,4 @@ https://github.com/user-attachments/assets/52d1d4da-872d-4318-b90f-a1f703b442ba
 ## 🚀 How to Run the Project
 1. Clone the repository
    ```bash
-   git clone [https://github.com/your-username/your-repo-name.git](https://github.com/AhmedElSayyadMohamed/ProductStoreMVC.git)
+   git clone https://github.com/AhmedElSayyadMohamed/ProductStoreMVC.git
