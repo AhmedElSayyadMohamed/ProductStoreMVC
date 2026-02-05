@@ -1,7 +1,7 @@
 
 package com.example.androidarchpattern_lab1.datasource.Products.remote;
 
-import com.example.androidarchpattern_lab1.Model.Product;
+import com.example.androidarchpattern_lab1.datasource.Model.Product;
 
 import java.util.List;
 

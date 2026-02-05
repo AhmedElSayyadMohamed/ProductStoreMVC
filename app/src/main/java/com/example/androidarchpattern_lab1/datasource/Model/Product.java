@@ -1,4 +1,4 @@
-package com.example.androidarchpattern_lab1.Model;
+package com.example.androidarchpattern_lab1.datasource.Model;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;

@@ -13,13 +13,13 @@
         android:theme="@style/Theme.AndroidArchPattern_Lab1">
 
         <activity
-            android:name=".fav.FavProductsActivity"
+            android:name=".ui.fav.view.FavProductsActivity"
             android:exported="false" />
         <activity
-            android:name=".allProducts.AllProductActivity"
+            android:name=".ui.allProducts.view.AllProductActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

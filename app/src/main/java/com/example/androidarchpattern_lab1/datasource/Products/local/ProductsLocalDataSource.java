@@ -4,11 +4,14 @@ import android.content.Context;
 
 import androidx.lifecycle.LiveData;
 
-import com.example.androidarchpattern_lab1.Model.Product;
-import com.example.androidarchpattern_lab1.db.AppDatabase;
-import com.example.androidarchpattern_lab1.db.ProductsDAO;
+import com.example.androidarchpattern_lab1.datasource.Model.Product;
+import com.example.androidarchpattern_lab1.datasource.db.AppDatabase;
+import com.example.androidarchpattern_lab1.datasource.db.ProductsDAO;
 
 import java.util.List;
+
+import io.reactivex.rxjava3.core.Completable;
+import io.reactivex.rxjava3.core.Flowable;
 
 public class ProductsLocalDataSource {
     private ProductsDAO productsDAO;
@@ -17,20 +20,16 @@ public class ProductsLocalDataSource {
         productsDAO = AppDatabase.getInstance(context).productDao();
     }
 
-    public LiveData<List<Product>> getFavouriteProducts() {
+    public Flowable<List<Product>> getFavouriteProducts() {
 
         return productsDAO.getFavouriteProducts();
     }
 
-    public void addToFavourite(Product product) {
-        new Thread(() -> {
-            productsDAO.addToFavourite(product);
-        }).start();
+    public Completable addToFavourite(Product product) {
+        return productsDAO.addToFavourite(product);
     }
 
-    public void deleteFromFavourite(Product product) {
-        new Thread(() -> {
-            productsDAO.deleteFromFavourite(product);
-        }).start();
+    public Completable deleteFromFavourite(Product product) {
+        return productsDAO.deleteFromFavourite(product);
     }
 }

@@ -53,6 +53,18 @@ dependencies {
     // Room
     implementation(libs.room.runtime)
     annotationProcessor(libs.room.compiler)
+
+
+    //RXJava
+    implementation("io.reactivex.rxjava3:rxjava:3.1.10")
+    //RXJava with android to be lifecycle aware
+    implementation("io.reactivex.rxjava3:rxandroid:3.0.2")
+
+    //retrofit with RXJava
+    implementation("com.github.akarnokd:rxjava3-retrofit-adapter:3.0.0")
+
+    //room with RXJava
+    implementation("androidx.room:room-rxjava3:2.6.1")
 }
 java {
     toolchain {

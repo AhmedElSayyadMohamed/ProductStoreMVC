@@ -1,4 +1,4 @@
-package com.example.androidarchpattern_lab1;
+package com.example.androidarchpattern_lab1.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,8 +7,9 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.androidarchpattern_lab1.allProducts.AllProductActivity;
-import com.example.androidarchpattern_lab1.fav.FavProductsActivity;
+import com.example.androidarchpattern_lab1.R;
+import com.example.androidarchpattern_lab1.ui.allProducts.view.AllProductActivity;
+import com.example.androidarchpattern_lab1.ui.fav.view.FavProductsActivity;
 
 public class MainActivity extends AppCompatActivity {
 

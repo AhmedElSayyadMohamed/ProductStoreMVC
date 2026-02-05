@@ -1,4 +1,4 @@
-package com.example.androidarchpattern_lab1.allProducts;
+package com.example.androidarchpattern_lab1.ui.allProducts.view;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.androidarchpattern_lab1.Model.Product;
+import com.example.androidarchpattern_lab1.datasource.Model.Product;
 import com.example.androidarchpattern_lab1.R;
 
 import java.util.ArrayList;

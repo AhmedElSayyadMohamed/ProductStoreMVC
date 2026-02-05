@@ -1,4 +1,4 @@
-package com.example.androidarchpattern_lab1.fav;
+package com.example.androidarchpattern_lab1.ui.fav.view;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,9 +13,9 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.androidarchpattern_lab1.Model.Product;
+import com.example.androidarchpattern_lab1.datasource.Model.Product;
 import com.example.androidarchpattern_lab1.R;
-import  com.example.androidarchpattern_lab1.allProducts.fav.OnFavoriteClickListener;
+
 import java.util.ArrayList;
 import java.util.List;
 

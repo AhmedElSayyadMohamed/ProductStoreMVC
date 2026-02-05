@@ -1,11 +1,12 @@
 package com.example.androidarchpattern_lab1.datasource.Products.remote;
 
-import com.example.androidarchpattern_lab1.Model.Network.Network;
-import com.example.androidarchpattern_lab1.datasource.Products.remote.ProductNetworkResponse;
-import com.example.androidarchpattern_lab1.Model.ProductsResponse;
+import com.example.androidarchpattern_lab1.datasource.Network.Network;
+import com.example.androidarchpattern_lab1.datasource.Model.ProductsResponse;
 
 import java.io.IOException;
+import java.util.List;
 
+import io.reactivex.rxjava3.core.Single;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -18,30 +19,10 @@ public class ProductsRemoteDataSource {
         productService = Network.getInstance().create(ProductService.class);
     }
 
-    public void getAllProducts(ProductNetworkResponse callback) {
+    public Single<ProductsResponse> getAllProducts() {
 
-        productService.getProducts().enqueue(new Callback<ProductsResponse>() {
+        return productService.getProducts();
 
-            @Override
-            public void onResponse(Call<ProductsResponse> call,
-                                   Response<ProductsResponse> response) {
-
-                if (response.isSuccessful() && response.body() != null) {
-                    callback.onSuccess(response.body().geProducts());
-                } else {
-                    callback.onFailure("Server Error");
-                }
-            }
-
-            @Override
-            public void onFailure(Call<ProductsResponse> call, Throwable t) {
-                if (t instanceof IOException) {
-                    callback.noInternet();
-                } else {
-                    callback.onFailure(t.getMessage());
-                }
-            }
-        });
     }
 
 }

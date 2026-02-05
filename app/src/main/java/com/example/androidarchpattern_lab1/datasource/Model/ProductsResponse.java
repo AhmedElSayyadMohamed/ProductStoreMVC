@@ -1,4 +1,4 @@
-package com.example.androidarchpattern_lab1.Model;
+package com.example.androidarchpattern_lab1.datasource.Model;
 
 import java.util.List;
 
